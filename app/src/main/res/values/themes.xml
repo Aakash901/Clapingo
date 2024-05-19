@@ -1,0 +1,6 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ClapTask" parent="Theme.Material3.DayNight.NoActionBar"/>
+
+    <style name="Theme.ClapTask" parent="Base.Theme.ClapTask" />
+</resources>

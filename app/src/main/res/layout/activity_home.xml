@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="@color/white"
+    tools:context=".view.HomeActivity">
+
+    <ScrollView
+
+        android:id="@+id/scrollViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/submitBtn">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="@string/heading"
+                android:textColor="@color/black"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/subHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/header"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="@string/feedback"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subHeader"
+                android:visibility="visible"
+                android:layout_marginTop="30dp"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_feedback_category" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/otherBtn"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/recyclerViewFeedback">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/imageLogo"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:padding="5dp"
+                        android:src="@drawable/others" />
+
+                    <TextView
+                        android:id="@+id/textViewCategoryName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_toStartOf="@id/arrow2"
+                        android:layout_toEndOf="@id/imageLogo"
+                        android:padding="16dp"
+                        android:text="Other"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/arrow2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:padding="5dp"
+                        android:src="@drawable/nav_arrow" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/content_other"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/otherBtn"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="26dp"
+                android:background="@drawable/content_background"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/gray2"
+                    android:hint="Write anything else here"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:visibility="visible" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submitBtn"
+
+        android:layout_width="match_parent"
+        android:layout_height="58.58dp"
+        android:layout_above="@id/btmHeader"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="26dp"
+        android:layout_marginTop="6.50dp"
+        android:backgroundTint="@color/light_green"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:cornerRadius="10.40dp" />
+
+    <TextView
+        android:id="@+id/btmHeader"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/btm_header"
+        android:textSize="10dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/thankULayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/thank_you_emoji"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thank You for Giving Feedback"
+            android:textSize="30sp"
+            android:layout_marginHorizontal="26dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="68.58dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="26dp"
+            android:layout_marginTop="36.50dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="Go To Dashboard"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:textSize="25dp"
+            app:cornerRadius="10.40dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

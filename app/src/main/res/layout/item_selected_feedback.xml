@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp"
+    android:background="@color/white"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="5dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/textViewSelectedItemHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selected Item"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentStart="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+        <ImageView
+            android:id="@+id/deleteIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/delete"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/textViewSelectedItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Not too good / bad"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textViewSelectedItemHeading"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentStart="true"
+            android:textSize="18sp"
+             />
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

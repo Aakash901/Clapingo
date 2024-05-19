@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ClapTask</string>
+    <string name="btm_header">Note: For regular sessions, there should be atleast one feedback \n in each category.</string>
+    <string name="feedback">Feedback is critical for your learner to improve. it is \n mandatory to give atleast two feedbacks for \n regular sessions </string>
+    <string name="heading">"Tell us a bit about your learners \n English proficiency"</string>
+    <string name="btm_header_error">"Error: You need to choose At least 1 from each section"</string>
+</resources>
